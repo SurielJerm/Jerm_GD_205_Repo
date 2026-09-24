@@ -8,8 +8,8 @@ public class TestMovement : MonoBehaviour //Name of & kind of file
     InputAction moveAction; //InputAction is the class we call & "moveAction" is the name of our object
     public Camera playerCamera; //Refers to the camera
     public GameObject panel1;
-    private float maxCameraHeight = 25f;
     private Vector3 Spawn = new Vector3(-11f,1.5f,30f);
+    public Transform specialPos;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,7 +26,9 @@ public class TestMovement : MonoBehaviour //Name of & kind of file
 
     if (moveAction.WasPressedThisFrame())
         {
-            transform.position += new Vector3(rawMove.x, 0f,rawMove.y);
+            transform.position += new Vector3(rawMove.x, 0f,rawMove.y); 
+                                    //Vector3(x,         y,         z)
+            //rawMove.y is translated to the z axis because of our control scheme (WASD/Arrow Keys)
         }
 
         Debug.Log(transform.position); //Shows player position in console
@@ -49,7 +51,7 @@ public class TestMovement : MonoBehaviour //Name of & kind of file
             transform.position += new Vector3(0f,0.1f,0f);
         }
 
-        //So camera doesn't go above a certain height
+        //Player returns to spawn after ascending too high
         if (transform.position.y > 30f)
         {
             transform.position = Spawn;

@@ -6,10 +6,9 @@ public class TestMovement : MonoBehaviour //Name of & kind of file
 {
     //Variable's can be written anywhere, but if you're going to continuously refer to them it's best to at the top before Start
     InputAction moveAction; //InputAction is the class we call & "moveAction" is the name of our object
-    public Camera playerCamera; //Refers to the camera
     public GameObject panel1;
-    private float maxCameraHeight = 25f;
     private Vector3 Spawn = new Vector3(-11f,1.5f,30f);
+    public Transform specialPos;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -33,12 +32,14 @@ public class TestMovement : MonoBehaviour //Name of & kind of file
 
     //Player Position Effects
         //Color Change
+        //Player must change all cubes to green
         if (transform.position == new Vector3(32f,1.5f,6f))
         {
             panel1.GetComponent<Renderer>().material.color = Color.green;
         }
 
         //Ascension
+        //Rings that proppel the player in different directions
         if (transform.position == new Vector3(-3f,1.5f,50f))
         {
             transform.position += new Vector3(0f,1f,0f);
@@ -49,13 +50,8 @@ public class TestMovement : MonoBehaviour //Name of & kind of file
             transform.position += new Vector3(0f,0.1f,0f);
         }
 
-        //So camera doesn't go above a certain height
-        if (transform.position.y > 30f)
-        {
-            transform.position = Spawn;
-        }
-
         //Teleportation
+        //A guessing game where the player must choose between three panels, the correct one teleports them to the next platform while the others return them to spawn
         if (transform.position == new Vector3(-39f,1.5f,37f))
         {
             transform.position = new Vector3(-51f,1.5f,61f);

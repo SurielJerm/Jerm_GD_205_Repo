@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.InputSystem; //Adds on the new Unity input system
 
@@ -27,7 +28,6 @@ public class TestMovement : MonoBehaviour //Name of & kind of file
 
         Debug.Log(transform.position); //Shows player position in console
 
-    
 
     }
 }

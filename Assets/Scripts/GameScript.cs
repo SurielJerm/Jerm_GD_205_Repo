@@ -51,7 +51,7 @@ public class GameScript : MonoBehaviour
             player.transform.position = acsendPoint2.position + new Vector3(0f, 1f, 0f);
         }
             //Down
-        if (player.transform.position.x == decendPoint1.position.x && player.transform.position.z == decendPoint1.position.z && player.transform.position.y >= decendPoint2.position.y +1f)
+        if (player.transform.position.x == decendPoint1.position.x && player.transform.position.z == decendPoint1.position.z && player.transform.position.y >= decendPoint2.position.y + 1.1f)
         {
             player.transform.position = player.transform.position + new Vector3(0f, -0.1f, 0f);
         }
@@ -102,17 +102,22 @@ public class GameScript : MonoBehaviour
         {
             specialPos6.transform.GetComponent<Renderer>().material.color = Color.green;
         }
+            //Win
+        if (specialPos4.transform.GetComponent<Renderer>().material.color == Color.green && specialPos5.transform.GetComponent<Renderer>().material.color == Color.green && specialPos6.transform.GetComponent<Renderer>().material.color == Color.green && player.transform.position == specialPos6.transform.position + new Vector3(0f,1f,0f))
+        {
+            player.transform.position = spawnPoint.position + new Vector3(0f,1f,0f);
+        }
 
         //Island 4
         //A guessing game where the player must choose between three panels, the correct one teleports them to the next platform while the others return them to spawn
         if (player.transform.position == teleEnter.position + new Vector3(0f,1f,0f))
         {
-            player.transform.position = new Vector3(-47f,1f,12f);
+            player.transform.position = new Vector3(-48f,1f,12f);
         }
         //Guess1
         if (player.transform.position == teleSpot2.position + new Vector3(0f,1f,0f))
         {
-            player.transform.position = new Vector3(-75f,1f,29f);
+            player.transform.position = new Vector3(-76f,1f,29f);
         }
         else if (player.transform.position == teleSpot1.position + new Vector3(0f,1f,0f) || player.transform.position == teleSpot3.position + new Vector3(0f,1f,0f))
         {
@@ -121,7 +126,7 @@ public class GameScript : MonoBehaviour
         //Guess2
         if (player.transform.position == teleSpot4.position + new Vector3(0f,1f,0f))
         {
-            player.transform.position = new Vector3(-47f,1f,47f);
+            player.transform.position = new Vector3(-48f,1f,47f);
         }
         else if (player.transform.position == teleSpot5.position + new Vector3(0f,1f,0f) || player.transform.position == teleSpot6.position + new Vector3(0f,1f,0f))
         {
@@ -141,6 +146,7 @@ public class GameScript : MonoBehaviour
         {
             WinSpot.transform.GetComponent<Renderer>().material.color = Color.green;
             player.transform.position = spawnPoint.position + new Vector3(0f,1f,0f);
+            Debug.Log("You Did It!");
         }
 
     }

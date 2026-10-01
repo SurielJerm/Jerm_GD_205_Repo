@@ -26,7 +26,7 @@ public class TestMovement : MonoBehaviour //Name of & kind of file
             transform.position += new Vector3(rawMove.x, 0f,rawMove.y);
         }
 
-        Debug.Log(transform.position); //Shows player position in console
+        //Debug.Log(transform.position); //Shows player position in console
 
 
     }

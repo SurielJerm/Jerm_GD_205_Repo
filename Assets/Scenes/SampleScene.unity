@@ -51142,7 +51142,7 @@ Light:
   serializedVersion: 12
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 2
+  m_Intensity: 5
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -51185,7 +51185,7 @@ Light:
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
-  m_ColorTemperature: 5000
+  m_ColorTemperature: 2492
   m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
@@ -51204,13 +51204,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 410087039}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.35860053, y: 0.616038, z: -0.02460946, w: 0.700926}
-  m_LocalPosition: {x: -5.95, y: 10.15, z: -18.580002}
+  m_LocalRotation: {x: 0.01745245, y: 0, z: 0, w: 0.99984777}
+  m_LocalPosition: {x: 0, y: 22, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 32.21, y: 91.097, z: 28.778}
+  m_LocalEulerAnglesHint: {x: 2, y: 0, z: 0}
 --- !u!114 &410087042
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -51489,7 +51489,7 @@ Transform:
   m_GameObject: {fileID: 412177226}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -11, y: 0, z: -21.000002}
+  m_LocalPosition: {x: -36, y: 0, z: -3.9999962}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -61913,7 +61913,7 @@ Transform:
   m_GameObject: {fileID: 481147828}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 1, z: -0, w: 0}
-  m_LocalPosition: {x: -39, y: 0, z: -4}
+  m_LocalPosition: {x: -11.000004, y: 0, z: -21.000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -75572,7 +75572,7 @@ Transform:
   m_GameObject: {fileID: 594706494}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -51, y: 0, z: -4}
+  m_LocalPosition: {x: -23.000004, y: 0, z: -21.000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -79248,7 +79248,7 @@ Transform:
   m_GameObject: {fileID: 620212524}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -50, y: 0, z: -1}
+  m_LocalPosition: {x: -22.000004, y: 0, z: -18.000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -120132,7 +120132,7 @@ GameObject:
   m_Component:
   - component: {fileID: 977580902}
   m_Layer: 0
-  m_Name: Board (1)
+  m_Name: Board (0)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -135027,7 +135027,7 @@ Transform:
   m_GameObject: {fileID: 1104936448}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23, y: 0, z: -21.000002}
+  m_LocalPosition: {x: -48, y: 0, z: -3.9999962}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -193118,7 +193118,7 @@ Transform:
   m_GameObject: {fileID: 1568279339}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -17, y: 0, z: -16.000002}
+  m_LocalPosition: {x: -42, y: 0, z: 1.0000038}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -202845,6 +202845,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c8859e0c6725f54b835cdfda312762d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyScript
+  Enmy1: {fileID: 0}
+  Enmy2: {fileID: 0}
+  Enmy3: {fileID: 0}
+  Enmy4: {fileID: 0}
+  Enmy5: {fileID: 0}
+  Enmy6: {fileID: 0}
+  Enmy7: {fileID: 0}
 --- !u!114 &1652430890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -202871,17 +202878,18 @@ MonoBehaviour:
   specialPos5: {fileID: 2056798846}
   specialPos6: {fileID: 930645802}
   teleEnter: {fileID: 680869867}
-  teleSpot1: {fileID: 1265845248}
-  teleSpot2: {fileID: 2018606147}
-  teleSpot3: {fileID: 738669297}
-  teleSpot4: {fileID: 364851233}
-  teleSpot5: {fileID: 1142800250}
-  teleSpot6: {fileID: 2071594967}
-  teleSpot7: {fileID: 1942251699}
-  teleSpot8: {fileID: 478468144}
-  teleSpot9: {fileID: 1721372699}
+  rightTele1: {fileID: 0}
+  rightTele2: {fileID: 0}
+  rightTele3: {fileID: 0}
   teleExit: {fileID: 1085233711}
   WinSpot: {fileID: 1496364483}
+  wrongGuesses:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &1654646315
 GameObject:
   m_ObjectHideFlags: 0
@@ -219697,7 +219705,7 @@ Transform:
   m_GameObject: {fileID: 1791438463}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -22, y: 0, z: -18.000002}
+  m_LocalPosition: {x: -47, y: 0, z: -0.9999962}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -223617,7 +223625,7 @@ Transform:
   m_GameObject: {fileID: 1819311813}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -45, y: 0, z: 1}
+  m_LocalPosition: {x: -17.000004, y: 0, z: -16.000004}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:

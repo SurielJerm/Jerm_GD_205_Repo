@@ -19,17 +19,12 @@ public class GameScript : MonoBehaviour
     public GameObject specialPos6;
     //Island 4
     public Transform teleEnter;
-    public Transform teleSpot1;
-    public Transform teleSpot2;
-    public Transform teleSpot3;
-    public Transform teleSpot4;
-    public Transform teleSpot5;
-    public Transform teleSpot6;
-    public Transform teleSpot7;
-    public Transform teleSpot8;
-    public Transform teleSpot9;
+    public Transform rightTele1;
+    public Transform rightTele2;
+    public Transform rightTele3;
     public Transform teleExit;
     public GameObject WinSpot;
+    public Transform[] wrongGuesses;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -114,32 +109,20 @@ public class GameScript : MonoBehaviour
         {
             player.transform.position = new Vector3(-48f,1f,12f);
         }
-        //Guess1
-        if (player.transform.position == teleSpot2.position + new Vector3(0f,1f,0f))
+        //RightGuess1
+        if (player.transform.position == rightTele1.position + new Vector3(0f,1f,0f))
         {
             player.transform.position = new Vector3(-76f,1f,29f);
         }
-        else if (player.transform.position == teleSpot1.position + new Vector3(0f,1f,0f) || player.transform.position == teleSpot3.position + new Vector3(0f,1f,0f))
-        {
-            player.transform.position = teleEnter.position + new Vector3(2f,1f,0f);
-        }
-        //Guess2
-        if (player.transform.position == teleSpot4.position + new Vector3(0f,1f,0f))
+        //RightGuess2
+        if (player.transform.position == rightTele2.position + new Vector3(0f,1f,0f))
         {
             player.transform.position = new Vector3(-48f,1f,47f);
         }
-        else if (player.transform.position == teleSpot5.position + new Vector3(0f,1f,0f) || player.transform.position == teleSpot6.position + new Vector3(0f,1f,0f))
-        {
-            player.transform.position = teleEnter.position + new Vector3(2f,1f,0f);
-        }
-        //Guess3
-        if (player.transform.position == teleSpot9.position + new Vector3(0f,1f,0f))
+        //RightGuess3
+        if (player.transform.position == rightTele3.position + new Vector3(0f,1f,0f))
         {
             player.transform.position = teleExit.position +new Vector3(0f,1f,0f);
-        }
-        else if (player.transform.position == teleSpot7.position + new Vector3(0f,1f,0f) || player.transform.position == teleSpot8.position + new Vector3(0f,1f,0f))
-        {
-            player.transform.position = teleEnter.position + new Vector3(2f,1f,0f);
         }
         //Win
         if (player.transform.position == WinSpot.transform.position + new Vector3(0f,1f,0f))
@@ -147,6 +130,13 @@ public class GameScript : MonoBehaviour
             WinSpot.transform.GetComponent<Renderer>().material.color = Color.green;
             player.transform.position = spawnPoint.position + new Vector3(0f,1f,0f);
             Debug.Log("You Did It!");
+        }
+        for (int i = 0; i < wrongGuesses.Length; i++)
+        {
+            if (player.transform.position == wrongGuesses[i].position + new Vector3(0f,1f,0f))
+            {
+                player.transform.position = teleEnter.position + new Vector3(1f,1f,0f);
+            }
         }
 
     }

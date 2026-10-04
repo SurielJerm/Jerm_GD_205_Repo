@@ -32790,6 +32790,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 262760792}
+  - component: {fileID: 262760793}
   m_Layer: 0
   m_Name: Island 2
   m_TagString: Untagged
@@ -32847,6 +32848,30 @@ Transform:
   - {fileID: 386344389}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &262760793
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 262760791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7041f9ca896397b4bada96716bfe511d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Island2_Script
+  spawnPoint: {fileID: 1882217814}
+  player: {fileID: 1051017198}
+  specialPos4: {fileID: 1400559121}
+  specialPos5: {fileID: 2056798846}
+  specialPos6: {fileID: 930645802}
+  Enmy1: {fileID: 40049025}
+  Enmy2: {fileID: 1223410333}
+  Enmy3: {fileID: 1619114038}
+  Enmy4: {fileID: 1345507009}
+  Enmy5: {fileID: 1510003793}
+  Enmy6: {fileID: 980505847}
+  Enmy7: {fileID: 955340615}
 --- !u!1 &263114789
 GameObject:
   m_ObjectHideFlags: 0
@@ -55065,6 +55090,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 434244572}
+  - component: {fileID: 434244573}
   m_Layer: 0
   m_Name: Island 1
   m_TagString: Untagged
@@ -55121,6 +55147,27 @@ Transform:
   - {fileID: 248381860}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &434244573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 434244571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 170779fed0e7b584d941105fc901ad3e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Island1_Script
+  player: {fileID: 1051017198}
+  acsendPoint1: {fileID: 1387374987}
+  acsendPoint2: {fileID: 1000491934}
+  decendPoint1: {fileID: 967628382}
+  decendPoint2: {fileID: 1423567865}
+  slidePoint: {fileID: 449371127}
+  specialPos1: {fileID: 1408734496}
+  specialPos2: {fileID: 1006919417}
+  specialPos3: {fileID: 156715659}
 --- !u!1 &434878011
 GameObject:
   m_ObjectHideFlags: 0
@@ -113350,6 +113397,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 920497635}
+  - component: {fileID: 920497636}
   m_Layer: 0
   m_Name: Island 3
   m_TagString: Untagged
@@ -113383,6 +113431,18 @@ Transform:
   - {fileID: 1801517423}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &920497636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 920497634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55488efbdad5a7647887f3bef5296643, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Island3_Script
 --- !u!1 &920868799
 GameObject:
   m_ObjectHideFlags: 0
@@ -116848,7 +116908,7 @@ GameObject:
   - component: {fileID: 955340618}
   - component: {fileID: 955340617}
   m_Layer: 0
-  m_Name: Enemy 6
+  m_Name: Enemy 7
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -120618,7 +120678,7 @@ GameObject:
   - component: {fileID: 980505850}
   - component: {fileID: 980505849}
   m_Layer: 0
-  m_Name: Enemy 5
+  m_Name: Enemy 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148281,7 +148341,7 @@ GameObject:
   - component: {fileID: 1223410336}
   - component: {fileID: 1223410335}
   m_Layer: 0
-  m_Name: Enemy 7
+  m_Name: Enemy 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -163882,7 +163942,7 @@ GameObject:
   - component: {fileID: 1345507011}
   - component: {fileID: 1345507010}
   m_Layer: 0
-  m_Name: Enemy 3
+  m_Name: Enemy 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -185507,7 +185567,7 @@ GameObject:
   - component: {fileID: 1510003796}
   - component: {fileID: 1510003795}
   m_Layer: 0
-  m_Name: Enemy 4
+  m_Name: Enemy 5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -199738,7 +199798,7 @@ GameObject:
   - component: {fileID: 1619114040}
   - component: {fileID: 1619114039}
   m_Layer: 0
-  m_Name: Enemy 2
+  m_Name: Enemy 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -201192,6 +201252,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1629501596}
+  - component: {fileID: 1629501597}
   m_Layer: 0
   m_Name: Island 4
   m_TagString: Untagged
@@ -201232,6 +201293,33 @@ Transform:
   - {fileID: 1113839344}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1629501597
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1629501595}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6330a4b9cbe9c134b818cb47b53bd4a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Island4_Script
+  player: {fileID: 1051017198}
+  spawnPoint: {fileID: 1882217814}
+  teleEnter: {fileID: 1800094239}
+  rightTele1: {fileID: 738669297}
+  rightTele2: {fileID: 2071594967}
+  rightTele3: {fileID: 1942251699}
+  teleExit: {fileID: 1953192419}
+  WinSpot: {fileID: 1496364483}
+  wrongGuesses:
+  - {fileID: 1265845248}
+  - {fileID: 2018606147}
+  - {fileID: 364851233}
+  - {fileID: 1142800250}
+  - {fileID: 478468144}
+  - {fileID: 1721372699}
 --- !u!1 &1633683973
 GameObject:
   m_ObjectHideFlags: 0
@@ -202809,8 +202897,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1652430888}
-  - component: {fileID: 1652430890}
-  - component: {fileID: 1652430889}
   m_Layer: 0
   m_Name: Game
   m_TagString: Untagged
@@ -202833,63 +202919,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1652430889
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1652430887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c8859e0c6725f54b835cdfda312762d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyScript
-  Enmy1: {fileID: 0}
-  Enmy2: {fileID: 0}
-  Enmy3: {fileID: 0}
-  Enmy4: {fileID: 0}
-  Enmy5: {fileID: 0}
-  Enmy6: {fileID: 0}
-  Enmy7: {fileID: 0}
---- !u!114 &1652430890
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1652430887}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dfaf9cbf81d6dd540aef0aef87755949, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameScript
-  spawnPoint: {fileID: 1882217814}
-  player: {fileID: 1051017198}
-  acsendPoint1: {fileID: 1387374987}
-  acsendPoint2: {fileID: 1000491934}
-  decendPoint1: {fileID: 967628382}
-  decendPoint2: {fileID: 1423567865}
-  slidePoint: {fileID: 449371127}
-  specialPos1: {fileID: 1408734496}
-  specialPos2: {fileID: 1006919417}
-  specialPos3: {fileID: 156715659}
-  specialPos4: {fileID: 1400559121}
-  specialPos5: {fileID: 2056798846}
-  specialPos6: {fileID: 930645802}
-  teleEnter: {fileID: 680869867}
-  rightTele1: {fileID: 0}
-  rightTele2: {fileID: 0}
-  rightTele3: {fileID: 0}
-  teleExit: {fileID: 1085233711}
-  WinSpot: {fileID: 1496364483}
-  wrongGuesses:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &1654646315
 GameObject:
   m_ObjectHideFlags: 0
@@ -241388,7 +241417,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1953192419}
   m_Layer: 0
-  m_Name: TeleSpot (10)
+  m_Name: TeleExit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

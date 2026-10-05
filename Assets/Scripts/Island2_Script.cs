@@ -2,12 +2,10 @@ using UnityEngine;
 
 public class Island2_Script : MonoBehaviour
 {
-    public Transform spawnPoint;
     public GameObject player;
     
-    public GameObject specialPos4;
-    public GameObject specialPos5;
-    public GameObject specialPos6;
+    public GameObject[] specialPositions;
+    public GameObject indicator2;
     //Enemies
     public GameObject Enmy1;
     public GameObject Enmy2;
@@ -27,22 +25,23 @@ public class Island2_Script : MonoBehaviour
     void Update()
     {
         //Special Positions
-        if (player.transform.position == specialPos4.transform.position + new Vector3(0f,1f,0f))
+        for (int i = 0; i < specialPositions.Length; i++)
         {
-            specialPos4.transform.GetComponent<Renderer>().material.color = Color.green;
-        }
-        if (player.transform.position == specialPos5.transform.position + new Vector3(0f,1f,0f))
-        {
-            specialPos5.transform.GetComponent<Renderer>().material.color = Color.green;
-        }
-        if (player.transform.position == specialPos6.transform.position + new Vector3(0f,1f,0f))
-        {
-            specialPos6.transform.GetComponent<Renderer>().material.color = Color.green;
-        }
+            if (player.transform.position == specialPositions[i].transform.position + new Vector3(0f,1f,0f))
+            {
+                specialPositions[i].transform.GetComponent<Renderer>().material.color = Color.green;
+            }
+            
             //Win
-        if (specialPos4.transform.GetComponent<Renderer>().material.color == Color.green && specialPos5.transform.GetComponent<Renderer>().material.color == Color.green && specialPos6.transform.GetComponent<Renderer>().material.color == Color.green && player.transform.position == specialPos6.transform.position + new Vector3(0f,1f,0f))
-        {
-            player.transform.position = spawnPoint.position + new Vector3(0f,1f,0f);
+            if (specialPositions[i].transform.GetComponent<Renderer>().material.color == Color.green)
+            {
+                player.transform.position = indicator2.transform.position + new Vector3(0f,1f,0f);
+                indicator2.transform.GetComponent<Renderer>().material.color = Color.green;
+            }
         }
+
+        //Enemy Stuff
+
+        
     }
 }

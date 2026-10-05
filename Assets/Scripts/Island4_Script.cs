@@ -4,7 +4,7 @@ public class Island4_Script : MonoBehaviour
 {
     public GameObject player;
     
-    public Transform spawnPoint;
+    public GameObject indicator4;
     public Transform teleEnter;
     public Transform rightTele1;
     public Transform rightTele2;
@@ -22,21 +22,20 @@ public class Island4_Script : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Island 4
         //A guessing game where the player must choose between three panels, the correct one teleports them to the next platform while the others return them to spawn
         if (player.transform.position == teleEnter.position + new Vector3(0f,1f,0f))
         {
-            player.transform.position = new Vector3(-48f,1f,12f);
+            player.transform.position = new Vector3(-48f,1f,47f);
         }
         //RightGuess1
         if (player.transform.position == rightTele1.position + new Vector3(0f,1f,0f))
         {
-            player.transform.position = new Vector3(-76f,1f,29f);
+            player.transform.position = new Vector3(-73f,1f,29f);
         }
         //RightGuess2
         if (player.transform.position == rightTele2.position + new Vector3(0f,1f,0f))
         {
-            player.transform.position = new Vector3(-48f,1f,47f);
+            player.transform.position = new Vector3(-48f,1f,12f);
         }
         //RightGuess3
         if (player.transform.position == rightTele3.position + new Vector3(0f,1f,0f))
@@ -47,8 +46,8 @@ public class Island4_Script : MonoBehaviour
         if (player.transform.position == WinSpot.transform.position + new Vector3(0f,1f,0f))
         {
             WinSpot.transform.GetComponent<Renderer>().material.color = Color.green;
-            player.transform.position = spawnPoint.position + new Vector3(0f,1f,0f);
-            Debug.Log("You Did It!");
+            player.transform.position = indicator4.transform.position + new Vector3(0f,1f,0f);
+            indicator4.transform.GetComponent<Renderer>().material.color = Color.green;
         }
         for (int i = 0; i < wrongGuesses.Length; i++)
         {

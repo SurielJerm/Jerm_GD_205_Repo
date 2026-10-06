@@ -33,7 +33,7 @@ public class Island1_Script : MonoBehaviour
             player.transform.position = ascendPoint2.position + new Vector3(0f, 1f, 0f);
         }
         //Down
-        if (player.transform.position.x == descendPoint1.position.x && player.transform.position.z == descendPoint1.position.z && player.transform.position.y >= descendPoint2.position.y + 1.1f)
+        if (player.transform.position.x == descendPoint1.position.x && player.transform.position.z == descendPoint1.position.z && player.transform.position.y >= descendPoint2.position.y + 1f)
         {
             player.transform.position = player.transform.position + new Vector3(0f, -descendSpeed, 0f);
         }

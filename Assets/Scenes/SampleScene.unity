@@ -3908,7 +3908,7 @@ GameObject:
   - component: {fileID: 40049026}
   m_Layer: 0
   m_Name: Enemy
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -29739,7 +29739,15 @@ MonoBehaviour:
   - {fileID: 2056798846}
   - {fileID: 930645802}
   indicator2: {fileID: 1006919417}
-  enemies: []
+  enemies:
+  - {fileID: 40049025}
+  - {fileID: 1223410333}
+  - {fileID: 1619114038}
+  - {fileID: 1345507009}
+  - {fileID: 1510003793}
+  - {fileID: 980505847}
+  - {fileID: 955340615}
+  enemySpeed: 1
 --- !u!1 &263114789
 GameObject:
   m_ObjectHideFlags: 0
@@ -108174,7 +108182,7 @@ GameObject:
   - component: {fileID: 955340617}
   m_Layer: 0
   m_Name: Enemy 7
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111714,7 +111722,7 @@ GameObject:
   - component: {fileID: 980505849}
   m_Layer: 0
   m_Name: Enemy 6
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -137224,7 +137232,7 @@ GameObject:
   - component: {fileID: 1223410335}
   m_Layer: 0
   m_Name: Enemy 2
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -151257,7 +151265,7 @@ GameObject:
   - component: {fileID: 1345507010}
   m_Layer: 0
   m_Name: Enemy 4
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -170857,7 +170865,7 @@ GameObject:
   - component: {fileID: 1510003795}
   m_Layer: 0
   m_Name: Enemy 5
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

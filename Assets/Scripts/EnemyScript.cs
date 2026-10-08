@@ -21,7 +21,7 @@ public class EnemyScript : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
-            Debug.Log("Triggered by: " + collision.gameObject.name);
+            //Debug.Log("Triggered by: " + collision.gameObject.name);
             player.transform.position = indicator2.transform.position + new Vector3(3f,1f,0f);
         }
     }

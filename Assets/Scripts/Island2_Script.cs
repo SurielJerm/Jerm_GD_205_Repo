@@ -11,6 +11,9 @@ public class Island2_Script : MonoBehaviour
     public float enemySpeed = 0f;
     private float direction = 1f;
     private float direction2 = 1f;
+    private float direction3 = -1f;
+    private float direction4 = -1f;
+    private float direction5 = 1f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -40,12 +43,6 @@ public class Island2_Script : MonoBehaviour
         //Enemy Stuff
         for (int i = 0; i < enemies.Length; i++)
         {
-            enemies[i].GetComponent<Collider>().isTrigger = true;
-
-            if (player.transform.position == enemies[i].transform.position + new Vector3(0f,1f,0f))
-            {
-                player.transform.position = indicator2.transform.position + new Vector3(3f,1f,0f);
-            }
             //Enemy 1
             enemies[0].transform.position += new Vector3(enemySpeed, 0f, 0f) * direction * Time.deltaTime;
             if (enemies[0].transform.position.x > 13f)
@@ -67,32 +64,72 @@ public class Island2_Script : MonoBehaviour
                 direction2 = 1f;
             }
             //Enemy 3
-            if (enemies[2].transform.position == new Vector3(23f,0f,25f))
+            if (enemies[2].transform.position.z >= 25f && enemies[2].transform.position.x > 17f)
             {
                 enemies[2].transform.position += new Vector3(-enemySpeed,0f,0f)*Time.deltaTime;
             } 
-            else if (enemies[2].transform.position == new Vector3(17f,0f,25f))
+            else if (enemies[2].transform.position.x <= 17f && enemies[2].transform.position.z > 20f)
             {
                 enemies[2].transform.position += new Vector3(0f,0f,-enemySpeed)*Time.deltaTime;
             }
-            else if (enemies[2].transform.position == new Vector3(17f,0f,20f))
+            else if (enemies[2].transform.position.z <= 20f && enemies[2].transform.position.x < 23f)
             {
                 enemies[2].transform.position += new Vector3(enemySpeed,0f,0f)*Time.deltaTime;
             }
-            else if (enemies[2].transform.position == new Vector3(23f,0f,20f))
+            else if (enemies[2].transform.position.x >= 23f && enemies[2].transform.position.z < 25f)
             {
-                enemies[2].transform.position += new Vector3(enemySpeed,0f,0f)*Time.deltaTime;
+                enemies[2].transform.position += new Vector3(0f,0f,enemySpeed)*Time.deltaTime;
+            }
+            //Enemy 4
+            if (enemies[3].transform.position.x <= 23f && enemies[3].transform.position.z < 14f)
+            {
+                enemies[3].transform.position += new Vector3(0f,0f,enemySpeed)*Time.deltaTime;
+            } 
+            else if (enemies[3].transform.position.z >= 14f && enemies[3].transform.position.x < 29f)
+            {
+                enemies[3].transform.position += new Vector3(enemySpeed,0f,0f)*Time.deltaTime;
+            }
+            else if (enemies[3].transform.position.x >= 29f && enemies[3].transform.position.z > 9f)
+            {
+                enemies[3].transform.position += new Vector3(0f,0f,-enemySpeed)*Time.deltaTime;
+            }
+            else if (enemies[3].transform.position.z <= 9f && enemies[3].transform.position.x > 23f)
+            {
+                enemies[3].transform.position += new Vector3(-enemySpeed,0f,0f)*Time.deltaTime;
+            }
+            //Enemy 5
+            enemies[4].transform.position += new Vector3(0f, 0f, enemySpeed)*direction3*Time.deltaTime;
+            if (enemies[4].transform.position.z > 15f)
+            {
+                direction3 = -1f;
+            }
+            else if (enemies[4].transform.position.z < 5f)
+            {
+                direction3 = 1f;
             }
 
+            //Enemy 6
+            enemies[5].transform.position += new Vector3(0f, 0f, enemySpeed)*direction4*Time.deltaTime;
+            if (enemies[5].transform.position.z < 3f)
+            {
+                direction4 = 1f;
+            }
+            else if (enemies[5].transform.position.z > 15f)
+            {
+                direction4 = -1f;
+            }
+            //Enemy 7
+            enemies[6].transform.position += new Vector3(0f, 0f, enemySpeed)*direction5*Time.deltaTime;
+            if (enemies[6].transform.position.z > 13f)
+            {
+                direction5 = -1f;
+            }
+            else if (enemies[6].transform.position.z < 5f)
+            {
+                direction5 = 1f;
+            }
         }
         
     }
 
-    private void OnTriggerEnter(Collider enemieCol)
-    {
-        if (enemieCol.gameObject.CompareTag("Player"))
-        {
-        Debug.Log("Triggered by: " + enemieCol.gameObject.name);
-        }
-    }
 }

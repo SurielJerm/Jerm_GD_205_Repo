@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - Enemy
+  - Indicator1
+  - Indicator2
+  - Indicator3
+  - Indicator4
   layers:
   - Default
   - TransparentFX

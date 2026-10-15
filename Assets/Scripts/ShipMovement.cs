@@ -5,6 +5,9 @@ public class ShipMovement : MonoBehaviour
 {
     private InputAction moveAction;
     private InputAction lookAction;
+
+    public float shipSpeed = 0f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,8 +21,8 @@ public class ShipMovement : MonoBehaviour
     {
         //Player Look
         Vector2 rawLook = lookAction.ReadValue<Vector2>();
-        Vector3 lookDirection = new Vector3(rawLook.y, rawLook.x,0f); // Rotating the axis
-        Debug.Log("rawLook input:" + rawLook);
+        Vector3 lookDirection = new Vector3(-rawLook.y, rawLook.x,0f); // Rotating the axis
+        //Debug.Log("rawLook input:" + rawLook);
 
         transform.Rotate(lookDirection);
 
@@ -31,14 +34,18 @@ public class ShipMovement : MonoBehaviour
         //Player Movement
         Vector2 rawMove = moveAction.ReadValue<Vector2>();
         Vector3 moveDirection = new Vector3(rawMove.x, 0f, rawMove.y);
-        Debug.Log("rawMove input:" + rawMove);
+        //Debug.Log("rawMove input:" + rawMove);
 
-        GetComponent<Rigidbody>().AddRelativeForce(moveDirection*10f);
+        GetComponent<Rigidbody>().AddRelativeForce(moveDirection * shipSpeed);
         if (rawMove == Vector2.zero)
         {
             GetComponent<Rigidbody>().Sleep();
         }
-        
-        
+    }
+
+    private void OnCollisionEnter(Collision shipCol)
+    {
+            Debug.Log( "Ship collided with " + shipCol.gameObject.name);
+            //Destroy(shipCol.gameObject);
     }
 }

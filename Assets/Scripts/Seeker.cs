@@ -14,9 +14,28 @@ public class Seeker : MonoBehaviour
     // FixedUpdate is called once per standardized interval
     void FixedUpdate()
     {
-        Vector3 targetOffset = target.position - transform.position;
-        Vector3 targetDirection = Vector3.Normalize(targetOffset);
+        
+    }
+    private void OnTriggerEnter(Collider seekerSight)
+    {
+        if (seekerSight.gameObject.CompareTag("Player"))
+        {
+            GetComponent<Rigidbody>().WakeUp();
+            Vector3 targetOffset = target.position - transform.position;
+            Vector3 targetDirection = Vector3.Normalize(targetOffset);
 
-        GetComponent<Rigidbody>().AddForce(targetDirection * speed);
+            GetComponent<Rigidbody>().AddForce(targetDirection * speed);
+        }
+    }
+    private void OnTriggerExit(Collider seekerSight)
+    {
+        if (seekerSight.gameObject.CompareTag("Player"))
+        {
+            GetComponent<Rigidbody>().Sleep();
+        }
+    }
+    private void OnCollisionEnter(Collision seekerCol)
+    {
+        Destroy(seekerCol.gameObject);
     }
 }

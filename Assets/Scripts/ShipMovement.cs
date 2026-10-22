@@ -7,6 +7,7 @@ public class ShipMovement : MonoBehaviour
     private InputAction lookAction;
 
     public float shipSpeed = 0f;
+    public float lookSpeed = 0f;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -21,11 +22,11 @@ public class ShipMovement : MonoBehaviour
     {
         //Player Look
         Vector2 rawLook = lookAction.ReadValue<Vector2>();
-        Vector3 lookDirection = new Vector3(-rawLook.y, rawLook.x,0f); // Rotating the axis
+        Vector3 lookDirection = new Vector3(-rawLook.y, rawLook.x, 0f); // Rotating the axis
         //Debug.Log("rawLook input:" + rawLook);
 
-        transform.Rotate(lookDirection);
-
+        transform.Rotate(lookDirection * lookSpeed);
+       
     }
 
     // FixedUpdate is called once per standardized interval

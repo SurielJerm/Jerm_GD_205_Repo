@@ -347,7 +347,6 @@ GameObject:
   - component: {fileID: 2921119857308578623}
   - component: {fileID: 3377287844727459901}
   - component: {fileID: 6228355918802550540}
-  - component: {fileID: 2351543724110481631}
   m_Layer: 0
   m_Name: Plane
   m_TagString: Untagged
@@ -427,28 +426,6 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &2351543724110481631
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 929560121466373348}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &1003823516920188808
 GameObject:
   m_ObjectHideFlags: 0
@@ -2474,7 +2451,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8057645224299856017}
-  - component: {fileID: 4802696858314341696}
+  - component: {fileID: 3209691555335702131}
   m_Layer: 0
   m_Name: Ring
   m_TagString: Untagged
@@ -2526,7 +2503,7 @@ Transform:
   - {fileID: 2921119857308578623}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!65 &4802696858314341696
+--- !u!65 &3209691555335702131
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2541,7 +2518,7 @@ BoxCollider:
     serializedVersion: 2
     m_Bits: 0
   m_LayerOverridePriority: 0
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3

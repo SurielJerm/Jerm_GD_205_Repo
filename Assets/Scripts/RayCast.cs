@@ -29,13 +29,10 @@ public class RayCast : MonoBehaviour
     {
         //Player Cam
         Vector2 lookInput = lookAction.ReadValue<Vector2>();
-        Vector3 lookRotation = new Vector3(-lookInput.y, lookInput.x, 0f);
-        transform.Rotate(lookRotation * camSpeed *Time.deltaTime);
+        Vector3 look = new Vector3(-lookInput.y, lookInput.x, 0f);
+        transform.Rotate(look * camSpeed *Time.deltaTime);
+        //transform.localRotation = Quaternion.Euler(look);
 
-        if (middleMouse.IsPressed())
-        {
-            lookRotation = Vector3.zero;
-        }
     }
 
     void FixedUpdate()

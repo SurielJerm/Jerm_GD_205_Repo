@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 8669012485030881289}
   - component: {fileID: 8353466071186254004}
   - component: {fileID: 1360303080876606003}
+  - component: {fileID: 5605032480946615998}
   m_Layer: 0
   m_Name: EnemyB
   m_TagString: Untagged
@@ -125,3 +126,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9163a27cca1d7af4daf6b5d25cb7dfa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!135 &5605032480946615998
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5417755446005208292}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 5
+  m_Center: {x: 0, y: 0, z: 0}

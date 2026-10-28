@@ -21,7 +21,7 @@ public class RayCast : MonoBehaviour
         clickAction = InputSystem.actions.FindAction("Click");
         middleMouse = InputSystem.actions.FindAction("MiddleClick");
         
-        transform.Rotate(Vector3.zero);
+        //transform.Rotate(Vector3.zero);
     }
 
     // Update is called once per frame
@@ -30,8 +30,9 @@ public class RayCast : MonoBehaviour
         //Player Cam
         Vector2 lookInput = lookAction.ReadValue<Vector2>();
         Vector3 look = new Vector3(-lookInput.y, lookInput.x, 0f);
+        //Vector3 look = new Vector3(lookInput.x, lookInput.y, 0f);
         transform.Rotate(look * camSpeed *Time.deltaTime);
-        //transform.localRotation = Quaternion.Euler(look);
+        //transform.rotation = Quaternion.Euler();
 
     }
 

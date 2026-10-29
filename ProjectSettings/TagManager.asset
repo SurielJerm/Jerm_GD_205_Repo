@@ -9,6 +9,8 @@ TagManager:
   - Indicator2
   - Indicator3
   - Indicator4
+  - Target A
+  - Target B
   layers:
   - Default
   - TransparentFX

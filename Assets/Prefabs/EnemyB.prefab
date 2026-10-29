@@ -175,3 +175,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9163a27cca1d7af4daf6b5d25cb7dfa6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  target: {fileID: 0}
+  player: {fileID: 0}
+  playerPos: {fileID: 0}
+  tower1: {fileID: 0}
+  tower2: {fileID: 0}
+  speed: 3
+  force: 100
+  radius: 10
+  lift: 0

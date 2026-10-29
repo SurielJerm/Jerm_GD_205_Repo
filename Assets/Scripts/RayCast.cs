@@ -67,11 +67,11 @@ public class RayCast : MonoBehaviour
         }
 
         //Hitting Targets
-        if (laserHit.collider.gameObject.CompareTag("Target A"))
-        {
-            Debug.Log("Hit:" + laserHit.collider.gameObject.name);
-            laserHit.collider.gameObject.IsDestroyed();
-        }
+        //if (laserHit.collider.gameObject.CompareTag("Target A"))
+        //{
+            //Debug.Log("Hit:" + laserHit.collider.gameObject.name);
+            //laserHit.collider.gameObject.IsDestroyed();
+        //}
         
     }
 }

@@ -11,6 +11,8 @@ TagManager:
   - Indicator4
   - Target A
   - Target B
+  - Tower1
+  - Tower2
   layers:
   - Default
   - TransparentFX
